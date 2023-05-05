@@ -66,10 +66,10 @@ p.lead-smaller {
 
 .fg-primary-opaque {
     /* color: rgba(189, 93, 56, 0.5); */
-    --bs-accordion-bg: rgba(189, 93, 56, 0.5) !important;
-    --bs-accordion-btn-bg: rgba(189, 93, 56, 0.5) !important;
+    --bs-accordion-bg: rgba(189, 93, 56, 0.2) !important;
+    --bs-accordion-btn-bg: rgba(189, 93, 56, 0.2) !important;
     --bs-accordion-btn-color: black !important;
-    --bs-accordion-active-bg: rgba(189, 93, 56, 0.5) !important;
+    --bs-accordion-active-bg: rgba(189, 93, 56, 0.2) !important;
     --bs-accordion-active-color: black !important;
 }
 

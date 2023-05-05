@@ -4,81 +4,37 @@
     <div class="my-auto">
         <h2 class="mb-5">Publications</h2>
         <!--<h3 class="mb-1">2020</h3>-->
-        <div class="resume-item d-flex flex-column col-md-12 flex-md-row mb-3 bg-primary-opaque">
+        {% for pub in site.data.publications %}
+        {% if forloop.last %}
+          {% assign div_mb = 5 %}
+        {% else %}
+          {% assign div_mb = 3 %}
+        {% endif %}
+        <div class="resume-item d-flex flex-column col-md-12 flex-md-row mb-{{ div_mb }} bg-primary-very-opaque">
             <div class="w-100 text-light">
-                <h4 class="mb-0">Unsupervised Extraction of Workplace Rights and Duties from Collective Bargaining
-                    Agreements</h4>
-                <p class="mb-0 text-dark">Elliott Ash, <b>Jeff Jacobs</b>, Bentley MacLeod, Suresh Naidu, and Dominik
-                    Stammbach</p>
-                <p class="mb-1 text-dark"><span class="font-italic">Proceedings of the 20th IEEE International
-                        Conference on Data Mining -- International Workshop on Mining and Learning in the Legal Domain
-                        (ICDM-MLLD)</span>. 2020.</p>
+                <h4 class="mb-0">{{ pub.name }}</h4>
+                <p class="mb-0 text-dark">
+                    {% for auth in pub.authors %}
+                        {% if auth == "Jeff Jacobs" %}
+                          {% assign authname = "<b>Jeff Jacobs</b>" %}
+                        {% else %}
+                          {% assign authname = auth %}
+                        {% endif %}
+                        {% if forloop.last %}and {% endif %}{{ authname }}{% unless forloop.last %}{% unless forloop.length == 2 %}, {% endunless %}{% endunless %}
+                    {% endfor %}
+                </p>
+                <p class="mb-1 text-dark"><i>{{ pub.journal }}</i>. {{ pub.year }}.</p>
                 <p class="mb-0"><a
-                        href="https://elliottash.com/wp-content/uploads/2020/09/Ash-Jacobs-MacLeod-Naidu-Stammbach.pdf"
+                        href="{{ pub.link }}"
                         class="paper-link" title="PDF" target="_blank" rel="noopener noreferrer"><i
                             class="fas fa-file-pdf fa-2x"></i></a></p>
             </div>
         </div>
-
-        <div class="resume-item d-flex flex-column col-md-12 flex-md-row mb-3 bg-primary-opaque">
-            <div class="w-100 text-light">
-                <h4 class="mb-0">Monopsony in Online Labor Markets</h4>
-                <p class="mb-0 text-dark">Arindrajit Dube, <b>Jeff Jacobs</b>, Suresh Naidu, and Siddharth Suri</p>
-                <p class="mb-1 text-dark"><span class="font-italic">American Economic Review: Insights</span> (2)1:
-                    33-46. 2020.</p>
-                <p class="mb-0"><a href="https://www.aeaweb.org/articles?id=10.1257/aeri.20180150" class="paper-link"
-                        title="PDF" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf fa-2x"></i></a>
-                </p>
-            </div>
-        </div>
-
-        <!--<h3 class="mb-1">2013</h3>-->
-
-        <div class="resume-item d-flex flex-column col-md-12 flex-md-row mb-3 bg-primary-opaque">
-            <div class="w-100 text-light">
-                <h4 class="mb-0">Information Cartography: Creating Zoomable, Large-Scale Maps of Information</h4>
-                <p class="mb-0 text-dark">Dafna Shahaf, Jaewon Yang, Caroline Suen, <b>Jeff Jacobs</b>, Heidi Wang, and
-                    Jure Leskovec</p>
-                <p class="mb-1 text-dark"><span class="font-italic">Proceedings of the ACM International Conference on
-                        Knowledge Discovery and Data Mining (KDD)</span>, 1097-1105. 2013.</p>
-                <p class="mb-0">
-                    <!-- <a href="http://metromaps.stanford.edu/" target="_blank" rel="noopener noreferrer"><i
-                            class="fas fa-link fa-2x"></i>&nbsp;</a> -->
-                    <a href="https://dl.acm.org/citation.cfm?doid=2487575.2487690" class="paper-link" title="PDF"
-                        target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf fa-2x"></i></a>
-                </p>
-            </div>
-        </div>
-
-        <!--<h3 class="mb-1">2012</h3>-->
-
-        <div class="resume-item d-flex flex-column col-md-12 flex-md-row mb-3 bg-primary-opaque">
-            <div class="w-100 text-light">
-                <h4 class="mb-0">Metaheuristic Approaches to Resource Scheduling in Heterogeneous Wireless Networks</h4>
-                <p class="mb-0 text-dark">Cristy Duan, Honghao Gao, <b>Jeff Jacobs</b>, and Weixiang Wu</p>
-                <p class="mb-1 text-dark"><span class="font-italic">Joint Mathematics Meetings (JMM)</span>. 2012.</p>
-                <p class="mb-0"><a href="https://cs.stanford.edu/~jjacobs3/Duan_et_al-JMM_Poster.pdf" class="paper-link"
-                        title="PDF" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf fa-2x"></i></a>
-                </p>
-            </div>
-        </div>
-
-        <!--<h3 class="mb-1">2011</h3>-->
-
-        <div class="resume-item d-flex flex-column col-md-12 flex-md-row mb-5 bg-primary-opaque">
-            <div class="w-100 text-light">
-                <h4 class="mb-0">Evolving Musical Counterpoint: The Chronopoint Genetic Algorithm</h4>
-                <p class="mb-0 text-dark"><b>Jeff Jacobs</b> and James Reggia</p>
-                <p class="mb-1 text-dark"><span class="font-italic">Proceedings of the IEEE Congress on Evolutionary
-                        Computation</span>, 11-16. 2011.</p>
-                <p class="mb-0"><a href="https://arxiv.org/abs/1207.5560" class="paper-link" title="PDF" target="_blank"
-                        rel="noopener noreferrer"><i class="fas fa-file-pdf fa-2x"></i></a></p>
-            </div>
-        </div>
+        {% endfor %}
 
         <h3 class="mb-1">Working Papers</h3>
 
-        <div class="resume-item d-flex flex-column col-md-12 flex-md-row mb-3 bg-primary-opaque">
+        <div class="resume-item d-flex flex-column col-md-12 flex-md-row mb-3 bg-primary-very-opaque">
             <div class="w-100 text-light">
                 <h4 class="mb-0">How to Do Things with Translations: Cross-Lingual Phrase Embeddings for Translation
                     Analysis</h4>
@@ -89,7 +45,7 @@
             </div>
         </div>
 
-        <div class="resume-item d-flex flex-column col-md-12 flex-md-row mb-5 bg-primary-opaque">
+        <div class="resume-item d-flex flex-column col-md-12 flex-md-row mb-5 bg-primary-very-opaque">
             <div class="w-100 text-light">
                 <h4 class="mb-0">"Simultaneous and Systematic Abolition": Automated Content Analysis of the 1789 Cahiers
                     de Doleances</h4>
