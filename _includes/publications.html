@@ -20,10 +20,10 @@
                         {% else %}
                           {% assign authname = auth %}
                         {% endif %}
-                        {% if forloop.last %}and {% endif %}{{ authname }}{% unless forloop.last %}{% unless forloop.length == 2 %}, {% endunless %}{% endunless %}
+                        {% if forloop.last and forloop.length > 1 %}and {% endif %}{{ authname }}{% unless forloop.last %}{% unless forloop.length == 2 %}, {% endunless %}{% endunless %}
                     {% endfor %}
                 </p>
-                <p class="mb-1 text-dark"><i>{{ pub.journal }}</i>. {{ pub.year }}.</p>
+                <p class="mb-1 text-dark"><i>{{ pub.journal }}</i>{%if pub.vol_info %}, {{ pub.vol_info }}{% endif %}. {{ pub.year }}.</p>
                 <p class="mb-0"><a
                         href="{{ pub.link }}"
                         class="paper-link" title="PDF" target="_blank" rel="noopener noreferrer"><i
@@ -47,13 +47,16 @@
 
         <div class="resume-item d-flex flex-column col-md-12 flex-md-row mb-5 bg-primary-very-opaque">
             <div class="w-100 text-light">
-                <h4 class="mb-0">"Simultaneous and Systematic Abolition": Automated Content Analysis of the 1789 Cahiers
-                    de Doleances</h4>
+                <h4 class="mb-0">"Simultaneous and Systematic Abolition": Automated Content Analysis of the 1789 Cahiers de Doleances</h4>
                 <p class="mb-1 text-dark">Last Updated June 1, 2018</p>
                 <p class="mb-0"><a href="https://cs.stanford.edu/~jjacobs3/Jacobs-Cahiers_Paper_2018-06-01.pdf"
                         class="paper-link" title="PDF" target="_blank" rel="noopener noreferrer"><i
                             class="fas fa-file-pdf fa-2x"></i></a></p>
             </div>
         </div>
+
+        <h3 class="mb-1">Invited Talks</h3>
+
+        {% include talks.html %}
     </div>
 </section>

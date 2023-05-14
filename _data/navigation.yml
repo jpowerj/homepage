@@ -8,8 +8,6 @@
   anchor: "dissertation"
 - name: "Data / Software"
   anchor: "data-software"
-- name: "Talks"
-  anchor: "talks"
 - name: "Teaching"
   anchor: "teaching"
 - name: "Links"

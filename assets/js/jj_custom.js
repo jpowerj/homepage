@@ -7,6 +7,9 @@ $("#sideNav a").on('click', function (event) {
         // Prevent default anchor click behavior
         event.preventDefault();
 
+        // Closes responsive menu when a scroll trigger link is clicked
+        $('.navbar-collapse').collapse('hide');
+
         // Store hash
         var hash = this.hash;
         window.location.hash = hash;

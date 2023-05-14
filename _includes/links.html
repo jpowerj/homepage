@@ -9,15 +9,13 @@
                 <h4 class="mb-0">{{ link.name }}</h4>
                 <p class="mb-1 text-dark"><a class="text-dark" href="{{ link.url }}">{{ link.url_text }}</a></p>
                 <p class="mb-1 text-dark">{{ link.description }}</p>
+                {% if link.gh_url %}
                 <p class="mb-0">
-                    <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer"><i
-                            class="fas fa-link fa-2x"></i>&nbsp;</a>
-                    {% if link.gh_url %}
                     <a href="{{ link.gh_url }}" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-github fa-2x"></i>&nbsp;</a>
                     </a>
-                    {% endif %}
                 </p>
+                {% endif %}
             </div>
         </div>
         {% endfor %}

@@ -1,11 +1,25 @@
 - header: "At Georgetown"
+  inst: "Georgetown University"
   courses:
-    - name: "DSAN 5000: Data Science and Analytics"
+    - name: "Data Science and Analytics"
+      dept_code: "DSAN"
+      course_num: "5000"
       terms: ["Fall 2023"]
-    - name: "DSAN 5100: Probabilistic Modeling and Statistical Computing"
+    - name: "Probabilistic Modeling and Statistical Computing"
+      dept_code: "DSAN"
+      course_num: "5100"
       terms: ["Fall 2023"]
 - header: "At NYU"
+  inst: "New York University"
+  web_include: false
+  pdf_include: true
+  courses:
+    - dept_code: "DSUA"
+      course_num: "111"
+      name: "Data Science for Everyone"
+      terms: ["Spring, Summer-I, Summer-II, Fall 2020"]
 - header: "At Columbia"
+  inst: "Columbia University"
   courses:
     - dept_code: "QMSS"
       course_num: "5067"
@@ -28,6 +42,7 @@
       name: "Introduction to American Politics"
       terms: ["Fall 2016"]
 - header: "At Stanford"
+  inst: "Stanford University"
   courses:
     - dept_code: "CS"
       course_num: "109"
@@ -47,6 +62,7 @@
       terms: ["Autumn 2013"]
       desc: "(Developed curriculum for new one-credit Computer Science course)"
 - header: "At University of Maryland"
+  inst: "University of Maryland"
   courses:
     - dept_code: "CMSC"
       course_num: "420"
@@ -65,6 +81,9 @@
       name: "Object-Oriented Programming II"
       terms: ["Spring 2010"]
 - header: "Short Courses/Workshops"
+  inst: "Short Courses/Workshops"
+  web_include: true
+  pdf_include: false
   courses:
     - name: "Mobile App Development with React Native"
       terms: ["Summer 2022"]
@@ -92,3 +111,7 @@
       desc: "Stanford Splash! Program"
       loc: "Palo Alto, CA, USA"
       pdf_link: "http://prezi.com/uj6vtsorrdnk/?utm_campaign=share&utm_medium=copy&rc=ex0share"
+- header: "Tutoring Materials"
+  inst: "Tutoring"
+  web_include: true
+  pdf_include: false

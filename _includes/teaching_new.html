@@ -10,6 +10,8 @@
         <h3 class="mb-1">{{ item.header }}</h3>
         {% if item.header == "At NYU" %}
             {% include teaching_nyu.html %}
+        {% elsif item.header == "Tutoring Materials" %}
+            {% include tutoring.html %}
         {% else %}
             {% for course in item.courses %}
                 {% if forloop.last %}
@@ -21,7 +23,10 @@
                 
                 <div class="resume-item d-flex flex-column col-md-12 mb-{{ div_mb }} bg-primary-very-opaque">
                     <div class="resume-content-header d-flex flex-md-row">
-                        <h4 class="mb-0 flex-grow-1">{{ course.name }}</h4>
+                        <h4 class="mb-0 flex-grow-1">
+                            {% if course.dept_code and course.course_num %}
+                              {{ course.dept_code }} {{ course.course_num }}:&nbsp;
+                            {%- endif -%} {{ course.name }}</h4>
                         <div class="resume-date text-md-end align-self-center">
                             <span class="text-dark">{{ course.terms[0] }}</span>
                         </div>
