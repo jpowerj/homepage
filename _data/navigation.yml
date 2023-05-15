@@ -12,3 +12,5 @@
   anchor: "teaching"
 - name: "Links"
   anchor: "links"
+- name: "Research Blog"
+  href: "https://jjacobs.me"
