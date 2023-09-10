@@ -2,7 +2,6 @@
 build_and_export.sh
 build_and_export.ps1
 build_and_export*
-_site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
