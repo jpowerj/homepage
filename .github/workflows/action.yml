@@ -18,5 +18,5 @@ jobs:
         target: ${{ secrets.GU_DOMAINS_PATH }}
         strip_components: 1
         overwrite: true
-        rm: true
+        rm: false
 
