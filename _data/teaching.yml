@@ -1,14 +1,31 @@
 - header: "At Georgetown"
   inst: "Georgetown University"
   courses:
+    - name: "Advanced Data Visualization"
+      dept_code: "DSAN"
+      course_num: "5200"
+      terms: ["Spring 2024"]
+      url: "https://jjacobs.me/dsan5200"
+    - name: "Data Ethics and Policy"
+      dept_code: "DSAN"
+      course_num: "5450"
+      terms: ["Spring 2024"]
+      url: "https://jjacobs.me/dsan5450"
+    - name: "Data Structures, Objects, and Algorithms in Python"
+      dept_code: "DSAN"
+      course_num: "5500"
+      terms: ["Spring 2024"]
+      url: "https://jjacobs.me/dsan5500"
     - name: "Data Science and Analytics"
       dept_code: "DSAN"
       course_num: "5000"
       terms: ["Fall 2023"]
+      url: "https://jjacobs.me/dsan5000"
     - name: "Probabilistic Modeling and Statistical Computing"
       dept_code: "DSAN"
       course_num: "5100"
       terms: ["Fall 2023"]
+      url: "https://jjacobs.me/dsan5100-03"
 - header: "At NYU"
   inst: "New York University"
   web_include: false
