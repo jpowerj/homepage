@@ -9,11 +9,11 @@ jobs:
     - name: copy file via ssh key
       uses: appleboy/scp-action@v0.1.4
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        port: ${{ secrets.PORT }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        passphrase: ${{ secrets.SSH_PRIVATE_KEY_PASSPHRASE }}
+        host: ${{ secrets.GU_HOST }}
+        username: ${{ secrets.GU_USERNAME }}
+        port: ${{ secrets.GU_PORT }}
+        key: ${{ secrets.GU_SSH_PRIVATE_KEY }}
+        passphrase: ${{ secrets.GU_SSH_PRIVATE_KEY_PASSPHRASE }}
         source: "_site/*"
         target: ${{ secrets.GU_DOMAINS_PATH }}
         strip_components: 1

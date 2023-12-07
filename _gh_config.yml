@@ -22,10 +22,11 @@ title: "Jeff Jacobs | Assistant Teaching Professor of Data Science and Analytics
 email: jjacobs3@cs.stanford.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Assistant Teaching Professor, Data Science and Analytics, Georgetown University
-url: "https://cs.stanford.edu" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "/~jjacobs3"
+url: "https://jjacobs.me" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/homepage"
 twitter_username: jpowerj
 github_username:  jpowerj
+destination: docs/
 
 # Build settings
 #theme: minima
