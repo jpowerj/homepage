@@ -26,7 +26,7 @@ url: "https://jpj.georgetown.domains" # the base hostname & protocol for your si
 baseurl: ""
 twitter_username: jpowerj
 github_username:  jpowerj
-destination: docs_gu/
+destination: _docs_gu/
 
 # Build settings
 #theme: minima
